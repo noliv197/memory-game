@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-rotate@4.3.0/jquery.rotate.min.js"></script>
 
     <title>Memory Game</title>
 </head>
@@ -26,6 +27,31 @@
             transform: rotateY(180deg);
         }
     }
+    
+    .flip-container {
+        perspective: 1000px;
+    }
+
+    .flipper {
+        transform-style: preserve-3d;
+        transition: transform 2s; /* adjust duration to your liking */
+    }
+
+    .front, .back {
+        backface-visibility: hidden;
+    }
+
+    .front {
+        transform: rotateY(0deg);
+    }
+
+    .back {
+        transform: rotateY(180deg);
+    }
+
+    .flip-container.flip .flipper {
+        transform: rotateY(180deg);
+    }
 </style>
 <body class="font-mono flex flex-col justify-between w-full min-h-[100dvh]">
     
@@ -35,7 +61,7 @@
     ">   
         <h1 class="font-bold text-3xl">memory game</h1>
         <div>
-            <button type="button" class="
+            <button data-game="restart" type="button" class="
                 bg-yellow-600 hover:bg-yellow-100 
                 hover:text-blue-950 text-white font-bold 
                 py-2 px-4 rounded-full
@@ -43,7 +69,7 @@
                 Restart
             </button>
 
-            <button type="button" class="
+            <button data-game="new" type="button" class="
                 bg-gray-300 hover:bg-gray-700 
                 hover:text-white text-blue-950 font-bold 
                 py-2 px-4 rounded-full
@@ -55,18 +81,6 @@
     
     <main>
         <section id="board" class="w-2/3 mx-auto my-5">
-            <!-- <div class="grid gap-4 grid-cols-3">
-                <div class="
-                    rounded-full w-[100px] h-[100px] flex items-center justify-center
-                    bg-gray-700 text-white text-center
-                    flip"
-                >
-                </div>
-                <div class="
-                    rounded-full w-[100px] h-[100px] flex items-center justify-center
-                    bg-gray-700 text-white"
-                >test</div>
-            </div> -->
         </section>
         
         <section id="counters" class="flex gap-5 justify-center items-center">
@@ -91,8 +105,21 @@
                 <p class="text-blue-950 font-bold">
                     Moves:
                 </p>
-                <output class="text-blue-950 font-bold">
+                <output id="moves" class="text-blue-950 font-bold">
                     0
+                </output>
+            </div>
+
+            <div class="
+                flex gap-2 items-center 
+                bg-blue-300
+                p-3 rounded-md
+            ">
+                <p class="text-blue-950 font-bold">
+                    Pairs:
+                </p>
+                <output id="matches" class="text-blue-950 font-bold">
+                    0/0
                 </output>
             </div>
         </section>
