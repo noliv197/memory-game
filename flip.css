@@ -1,0 +1,27 @@
+.flip-container {
+    position: relative;
+}
+
+.front, 
+.back {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: transform .5s ease;
+}
+
+.back {
+    transform: perspective(1000px) rotateY(180deg);
+}
+
+.flipped .back {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.front {
+    transform: perspective(1000px) rotateY(0deg);
+    visibility: hidden;
+}
+
+.flipped .front {
+    transform: perspective(1000px) rotateY(-180deg);
+}
