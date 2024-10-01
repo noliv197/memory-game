@@ -25,8 +25,7 @@ Users should be able to:
 - See statics such as moves and timer
 
 ### App Preview
-
-![Screenshot of memory game page]('./game.png')
+<img src="./game.png" alt="Screenshot of memory game page"/>
 
 ### Links
 
