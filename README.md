@@ -38,8 +38,8 @@ Users should be able to:
     - Set html structure as model and then transfer the dynamic ones to jquery
     - Style components using tailwind
     - For the flip effect I used the following references:
-    - [Create a card flip animation with css](https://vanslaars.io/articles/create-a-card-flip-animation-with-css)
-    - [How to design a css card flip animation](https://dev.to/adetutu/how-to-design-a-css-card-flip-animation-creating-flipping-cards-on-hover-5ha6)
+      - [Create a card flip animation with css](https://vanslaars.io/articles/create-a-card-flip-animation-with-css)
+      - [How to design a css card flip animation](https://dev.to/adetutu/how-to-design-a-css-card-flip-animation-creating-flipping-cards-on-hover-5ha6)
 - After stylization, the next step was to build the page dynamically using jquery
   - set up time interval functions like countdown and timer
   - set up board function: handle game customization according to the game status
@@ -48,9 +48,9 @@ Users should be able to:
 
 ### Built with
 
-- Semantic HTML5 markup
-- Tailwind
-- jquery
+- [html5](https://img.shields.io/badge/html5-990f02?style=for-the-badge&logo=html5&logoColor=white)
+- [Tailwind](https://img.shields.io/badge/tailwindcss-0F172A?&logo=tailwindcss)
+- [jquery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
 
 
 ## Author
