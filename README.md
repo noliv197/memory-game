@@ -48,9 +48,9 @@ Users should be able to:
 
 ### Built with
 
-- [html5](https://img.shields.io/badge/html5-990f02?style=for-the-badge&logo=html5&logoColor=white)
-- [Tailwind](https://img.shields.io/badge/tailwindcss-0F172A?&logo=tailwindcss)
-- [jquery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
+- <img src ="https://img.shields.io/badge/html5-990f02?style=for-the-badge&logo=html5&logoColor=white" alt="html5">
+- <img src = "https://img.shields.io/badge/tailwindcss-0F172A?&logo=tailwindcss" alt="tailwindcss">
+- <img src ="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white" alt="jquery">
 
 
 ## Author
